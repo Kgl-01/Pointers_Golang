@@ -13,11 +13,12 @@ func main() {
 
 	fmt.Println("Age:", age)
 
-	adultYears := getAdultYears(agePointer)
-	fmt.Println(adultYears)
+	getAdultYears(agePointer)
+	fmt.Println("Directly mutated value", age)
 
 }
 
-func getAdultYears(age *int) int {
-	return *age - 18
+func getAdultYears(age *int) {
+	// return *age - 18
+	*age -= 18
 }
